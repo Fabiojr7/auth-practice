@@ -1,4 +1,4 @@
-package br.com.fabiojrsm.auth_practice.domain.user;
+package br.com.fabiojrsm.auth_practice.domain.product;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,16 +13,13 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="users")
-public class User {
+@Table(name = "Products")
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     private String name;
-    private String username;
-    private String email;
-    private String password;
-    private Role role;
-
+    private String description;
+    private String price;
 }
